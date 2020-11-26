@@ -31,7 +31,7 @@ body {
 .orbit {
   border-radius: 50%;
   position: absolute;
-  animation: orbit 3s linear infinite;
+  animation: orbit 7s linear infinite;
 }
 
 .orbit_mercury {
@@ -51,10 +51,10 @@ body {
 
 .orbit_venus {
   width: 200px;
-  height: 180px;
-  top: 33.5%;
+  height: 200px;
+  top: 32.5%;
   left: 41.5%;
-  animation-duration: 4s;
+  animation-duration: 10s;
   animation-name: orbit_reverse;
 }
 
@@ -62,22 +62,22 @@ body {
   width: 25px;
   height: 25px;
   background: radial-gradient(ellipse at center, rgba(243, 226, 199, 1) 0%, rgba(193, 158, 103, 1) 58%, rgba(193, 158, 103, 1) 58%, rgba(233, 212, 179, 1) 99%, rgba(233, 212, 179, 1) 99%, rgba(182, 141, 76, 1) 100%);
-  top: 32px;
+  top: 40px;
 }
 
 .orbit_earth {
-  width: 260px;
-  height: 230px;
-  top: 29.5%;
-  left: 39.5%;
-  animation-duration: 5s;
+  width: 280px;
+  height: 280px;
+  top: 26%;
+  left: 38.7%;
+  animation-duration: 14s;
 }
 
 .earth {
   width: 25px;
   height: 25px;
   background: radial-gradient(ellipse at center, rgba(206, 219, 233, 1) 0%, rgba(38, 85, 139, 1) 0%, rgba(58, 132, 195, 1) 68%, rgba(58, 132, 195, 1) 100%, rgba(58, 132, 195, 1) 101%);
-  top: 157px;
+  top: 180px;
 }
 
 .earth::before {
@@ -112,26 +112,26 @@ body {
 }
 
 .orbit_mars {
-  width: 290px;
-  height: 330px;
-  top: 22%;
-  left: 38.5%;
-  animation-duration: 6s;
+  width: 340px;
+  height: 340px;
+  top: 21.5%;
+  left: 36.3%;
+  animation-duration: 17s;
 }
 
 .mars {
   width: 25px;
   height: 25px;
   background: radial-gradient(ellipse at center, rgba(169, 3, 41, 1) 0%, rgba(107, 2, 14, 1) 5%, rgba(143, 2, 34, 1) 44%, rgba(66, 0, 14, 1) 100%);
-  left: 187px;
+  left: 220px;
 }
 
 .orbit_jupiter {
-  width: 500px;
+  width: 420px;
   height: 420px;
   top: 15%;
-  left: 31%;
-  animation-duration: 7s;
+  left: 32.6%;
+  animation-duration: 23s;
   animation-name: orbit_reverse;
 }
 
@@ -139,17 +139,17 @@ body {
   width: 50px;
   height: 50px;
   background: #cccccc;
-  left: 340px;
+  left: 90px;
   background: linear-gradient(to bottom, rgba(240, 183, 161, 1) 0%, rgba(117, 34, 1, 1) 25%, rgba(117, 34, 1, 1) 40%, rgba(117, 34, 1, 1) 47%, rgba(240, 183, 161, 1) 57%, rgba(191, 110, 78, 1) 63%, rgba(191, 110, 78, 1) 63%, rgba(191, 110, 78, 1) 66%, rgba(191, 110, 78, 1) 74%, rgba(117, 34, 1, 1) 89%, rgba(240, 183, 161, 1) 100%);
   box-shadow: inset 0 0 17px #ccc;
 }
 
 .orbit_saturn {
-  width: 620px;
-  height: 500px;
-  left: 25%;
-  top: 9%;
-  animation-duration: 8s;
+  width: 570px;
+  height: 570px;
+  left: 27%;
+  top: 3%;
+  animation-duration: 26s;
 }
 
 .saturn {
@@ -173,11 +173,11 @@ body {
 }
 
 .orbit_uranus {
-  width: 750px;
-  height: 550px;
-  left: 20%;
-  top: 5%;
-  animation-duration: 10s;
+  width: 670px;
+  height: 670px;
+  left: 23.5%;
+  top: -5%;
+  animation-duration: 28s;
   animation-name: orbit_reverse;
 }
 
@@ -185,15 +185,15 @@ body {
   width: 23px;
   height: 23px;
   background: linear-gradient(to bottom, rgba(0, 152, 191, 1) 0%, rgba(0, 158, 195, 1) 80%, rgba(48, 118, 193, 1) 99%);
-  top: 336px;
+  top: 233px;
 }
 
 .orbit_neptune {
-  width: 800px;
-  height: 570px;
-  left: 16%;
-  top: 5%;
-  animation-duration: 11s;
+  width: 750px;
+  height: 750px;
+  left: 21%;
+  top: -10%;
+  animation-duration: 30s;
 }
 
 .neptune {
@@ -205,11 +205,11 @@ body {
 }
 
 .orbit_pluto {
-  width: 850px;
-  height: 600px;
-  left: 12%;
-  top: 1%;
-  animation-duration: 12s;
+  width: 800px;
+  height: 800px;
+  left: 19%;
+  top: -14%;
+  animation-duration: 32s;
   animation-name: orbit_reverse;
 }
 
