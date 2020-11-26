@@ -1,0 +1,569 @@
+body {
+  margin: 0;
+}
+
+.galaxy {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background: #04041b;
+  position: relative;
+  overflow: hidden;
+}
+
+.planet {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.sun {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(ellipse at center, rgba(234, 40, 3, 1) 0%, rgba(234, 40, 3, 1) 1%, rgba(243, 197, 189, 1) 1%, rgba(243, 197, 189, 1) 1%, rgba(234, 40, 3, 1) 1%, rgba(255, 102, 0, 1) 67%, rgba(199, 34, 0, 1) 100%);
+  top: 40%;
+  left: 45%;
+  position: absolute;
+  animation: sun 5s alternate infinite;
+}
+
+.orbit {
+  border-radius: 50%;
+  position: absolute;
+  animation: orbit 3s linear infinite;
+}
+
+.orbit_mercury {
+  width: 130px;
+  height: 130px;
+  top: 37.5%;
+  left: 43.8%;
+}
+
+.mercury {
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(ellipse at center, rgba(248, 80, 50, 1) 0%, rgba(240, 47, 23, 1) 44%, rgba(240, 47, 23, 1) 44%, rgba(246, 41, 12, 1) 63%, rgba(229, 21, 2, 1) 100%);
+  top: 30px;
+  left: 90%;
+}
+
+.orbit_venus {
+  width: 200px;
+  height: 180px;
+  top: 33.5%;
+  left: 41.5%;
+  animation-duration: 4s;
+  animation-name: orbit_reverse;
+}
+
+.venus {
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(ellipse at center, rgba(243, 226, 199, 1) 0%, rgba(193, 158, 103, 1) 58%, rgba(193, 158, 103, 1) 58%, rgba(233, 212, 179, 1) 99%, rgba(233, 212, 179, 1) 99%, rgba(182, 141, 76, 1) 100%);
+  top: 32px;
+}
+
+.orbit_earth {
+  width: 260px;
+  height: 230px;
+  top: 29.5%;
+  left: 39.5%;
+  animation-duration: 5s;
+}
+
+.earth {
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(ellipse at center, rgba(206, 219, 233, 1) 0%, rgba(38, 85, 139, 1) 0%, rgba(58, 132, 195, 1) 68%, rgba(58, 132, 195, 1) 100%, rgba(58, 132, 195, 1) 101%);
+  top: 157px;
+}
+
+.earth::before {
+  content: "";
+  width: 10px;
+  height: 6px;
+  background: green;
+  position: absolute;
+  box-shadow: 0 0 15px green;
+  left: 3px;
+  top: 8px;
+  filter: blur(3px);
+}
+
+.orbit_moon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  position: relative;
+  right: 7px;
+  bottom: 7px;
+  animation: orbit_moon 2s linear infinite;
+}
+
+.moon {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ccc;
+  position: absolute;
+  top: 4px;
+}
+
+.orbit_mars {
+  width: 290px;
+  height: 330px;
+  top: 22%;
+  left: 38.5%;
+  animation-duration: 6s;
+}
+
+.mars {
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(ellipse at center, rgba(169, 3, 41, 1) 0%, rgba(107, 2, 14, 1) 5%, rgba(143, 2, 34, 1) 44%, rgba(66, 0, 14, 1) 100%);
+  left: 187px;
+}
+
+.orbit_jupiter {
+  width: 500px;
+  height: 420px;
+  top: 15%;
+  left: 31%;
+  animation-duration: 7s;
+  animation-name: orbit_reverse;
+}
+
+.jupiter {
+  width: 50px;
+  height: 50px;
+  background: #cccccc;
+  left: 340px;
+  background: linear-gradient(to bottom, rgba(240, 183, 161, 1) 0%, rgba(117, 34, 1, 1) 25%, rgba(117, 34, 1, 1) 40%, rgba(117, 34, 1, 1) 47%, rgba(240, 183, 161, 1) 57%, rgba(191, 110, 78, 1) 63%, rgba(191, 110, 78, 1) 63%, rgba(191, 110, 78, 1) 66%, rgba(191, 110, 78, 1) 74%, rgba(117, 34, 1, 1) 89%, rgba(240, 183, 161, 1) 100%);
+  box-shadow: inset 0 0 17px #ccc;
+}
+
+.orbit_saturn {
+  width: 620px;
+  height: 500px;
+  left: 25%;
+  top: 9%;
+  animation-duration: 8s;
+}
+
+.saturn {
+  width: 35px;
+  height: 35px;
+  background: #ccc;
+  top: 15%;
+  left: 51px;
+}
+
+.ring {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 7px solid rgb(168, 146, 146);
+  position: absolute;
+  transform: rotateX(109deg);
+  top: -14px;
+  left: -13px;
+  z-index: 10;
+}
+
+.orbit_uranus {
+  width: 750px;
+  height: 550px;
+  left: 20%;
+  top: 5%;
+  animation-duration: 10s;
+  animation-name: orbit_reverse;
+}
+
+.uranus {
+  width: 23px;
+  height: 23px;
+  background: linear-gradient(to bottom, rgba(0, 152, 191, 1) 0%, rgba(0, 158, 195, 1) 80%, rgba(48, 118, 193, 1) 99%);
+  top: 336px;
+}
+
+.orbit_neptune {
+  width: 800px;
+  height: 570px;
+  left: 16%;
+  top: 5%;
+  animation-duration: 11s;
+}
+
+.neptune {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.8) 15%, rgba(30, 87, 153, 1) 19%, rgba(30, 87, 153, 1) 20%, rgba(41, 137, 216, 1) 50%, rgba(30, 87, 153, 1) 80%, rgba(30, 87, 153, 1) 81%, rgba(30, 87, 153, 0.8) 85%, rgba(30, 87, 153, 0) 100%);
+  left: 90%;
+  top: 20%;
+}
+
+.orbit_pluto {
+  width: 850px;
+  height: 600px;
+  left: 12%;
+  top: 1%;
+  animation-duration: 12s;
+  animation-name: orbit_reverse;
+}
+
+.pluto {
+  width: 10px;
+  height: 10px;
+  background: rgb(24, 24, 24);
+  box-shadow: 0 0 2px #ccc;
+  top: 78.5%;
+  left: 90%;
+}
+
+.star {
+  width: 1px;
+  height: 1px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #ccc;
+  position: absolute;
+  animation: star 1s alternate infinite;
+}
+
+.star_2s {
+  animation-duration: 2s;
+}
+
+.star_4s {
+  animation: star_3s 3s ease-in infinite;
+}
+
+.star_4s {
+  animation: star_4s 4s alternate infinite;
+}
+
+.star_5s {
+  animation-duration: 5s;
+}
+
+.star1 {
+  top: 3%;
+  left: 3%;
+}
+
+.star2 {
+  top: 93%;
+  left: 95%;
+}
+
+.star3 {
+  top: 85%;
+  left: 87%;
+}
+
+.star3 {
+  top: 89%;
+  left: 9%;
+}
+
+.star4 {
+  top: 79%;
+  left: 1%;
+}
+
+.star5 {
+  top: 11%;
+  left: 13%;
+}
+
+.star6 {
+  top: 13%;
+  left: 15%;
+}
+
+.star7 {
+  top: 40%;
+  left: 23%;
+}
+
+.star8 {
+  top: 30%;
+  left: 73%;
+}
+
+.star9 {
+  top: 90%;
+  left: 13%;
+}
+
+.star10 {
+  top: 99%;
+  left: 33%;
+}
+
+.star11 {
+  top: 70%;
+  left: 23%;
+}
+
+.star12 {
+  top: 80%;
+  left: 53%;
+}
+
+.star13 {
+  top: 83%;
+  left: 65%;
+}
+
+.star14 {
+  top: 60%;
+  left: 60%;
+}
+
+.star15 {
+  top: 70%;
+  left: 70%;
+}
+
+.star16 {
+  top: 40%;
+  left: 85%;
+}
+
+.star17 {
+  top: 65%;
+  left: 43%;
+}
+
+.star18 {
+  top: 60%;
+  left: 3%;
+}
+
+.star19 {
+  top: 40%;
+  left: 5%;
+}
+
+.star20 {
+  top: 62%;
+  left: 13%;
+}
+
+.star21 {
+  top: 5%;
+  left: 23%;
+}
+
+.star22 {
+  top: 2%;
+  left: 40%;
+}
+
+.star23 {
+  top: 20%;
+  left: 52%;
+}
+
+.star24 {
+  top: 22%;
+  left: 40%;
+}
+
+.star25 {
+  top: 60%;
+  left: 30%;
+}
+
+.star26 {
+  top: 10%;
+  left: 70%;
+}
+
+.star27 {
+  top: 8%;
+  left: 80%;
+}
+
+.star28 {
+  top: 45%;
+  left: 40%;
+}
+
+.star29 {
+  top: 90%;
+  left: 75%;
+}
+
+.star30 {
+  top: 20%;
+  left: 20%;
+}
+
+.star31 {
+  top: 85%;
+  left: 90%;
+}
+
+.star32 {
+  top: 60%;
+  left: 99%;
+}
+
+.star33 {
+  top: 65%;
+  left: 80%;
+}
+
+.star34 {
+  top: 15%;
+  left: 76%;
+}
+
+.star35 {
+  top: 15%;
+  left: 95%;
+}
+
+.star36 {
+  top: 25%;
+  left: 84%;
+}
+
+.star37 {
+  top: 40%;
+  left: 65%;
+}
+
+.star38 {
+  top: 25%;
+  left: 65%;
+}
+
+.star39 {
+  top: 88%;
+  left: 42%;
+}
+
+.star40 {
+  top: 85%;
+  left: 35%;
+}
+
+.star41 {
+  top: 90%;
+  left: 22%;
+}
+
+.star42 {
+  top: 95%;
+  left: 57%;
+}
+
+.star43 {
+  top: 12%;
+  left: 35%;
+}
+
+.star44 {
+  top: 20%;
+  left: 12%;
+}
+
+.star45 {
+  top: 62%;
+  left: 88%;
+}
+
+.star46 {
+  top: 20%;
+  left: 1%;
+}
+
+.star47 {
+  top: 10%;
+  left: 60%;
+}
+
+.star48 {
+  top: 50%;
+  left: 75%;
+}
+
+.star49 {
+  top: 50%;
+  left: 95%;
+}
+
+.star50 {
+  top: 35%;
+  left: 31%;
+}
+
+@keyframes sun {
+  0% {
+    transform: scale(1);
+    box-shadow: 1px 1px 2px rgba(255, 102, 0, 1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.005);
+    box-shadow: 1px 1px 12px rgba(255, 102, 0, 1);
+    opacity: 0.9;
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes orbit_reverse {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes orbit_moon {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes star {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+@keyframes star_4s {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes star_3s {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
